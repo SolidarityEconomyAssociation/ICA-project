@@ -1,0 +1,31 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX essglobal: <https://w3id.solidarityeconomy.coop/essglobal/V2a/vocab/>
+PREFIX gr: <http://purl.org/goodrelations/v1#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ospostcode: <http://data.ordnancesurvey.co.uk/id/postcodeunit/>
+PREFIX rov: <http://www.w3.org/ns/regorg#>
+PREFIX osspatialrelations: <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/>
+PREFIX : <https://w3id.solidarityeconomy.coop/ICA/>
+
+SELECT ?name ?uri ?lat ?lng ?street ?locality ?postcode ?country ?within ?regorg ?www ?tel ?primaryActivity
+WHERE {
+	?uri rdf:type essglobal:SSEInitiative .
+	?uri gr:name ?name .
+    ?uri essglobal:organisationalStructure ?regorg .
+	OPTIONAL { ?uri essglobal:primarySector ?primaryActivity . }
+    OPTIONAL { ?uri vcard:hasTelephone ?hasTel . }
+	OPTIONAL { ?hasTel vcard:value ?tel . }
+	OPTIONAL { ?uri foaf:homepage ?www . }
+	?uri essglobal:hasAddress ?addr .
+	OPTIONAL { ?addr vcard:street-address ?street . }
+	OPTIONAL { ?addr vcard:postal-code ?postcode . }
+	OPTIONAL { ?addr vcard:locality ?locality . }
+	OPTIONAL { ?addr vcard:country-name ?country . }
+	?addr osspatialrelations:within ?within .
+	?within geo:lat ?lat.
+	?within geo:long ?lng.
+}
