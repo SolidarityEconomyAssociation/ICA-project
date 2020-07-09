@@ -5,10 +5,10 @@
   "filterableFields_comment" : "A list of the fields that can populate the directory",
   "filterableFields" : [{ "field": "country", "label": "Countries" }],
   "showDatasetsPanel" : true,
-  "htmlTitle" : "ICA Map"
+  "htmlTitle" : "ICA Map",
   // "searchedFields" : ["country","name","dataset","www","locality","postcode","country"]
   // "initialBounds_comment": "The initial bounds of a newly loaded map",
   // "initialBounds": [[0, -0], [-40, 120]]
-  // "defaultLatLng_comment": "The default latitude and longitude values for initiatives with no address",
-  // "defaultLatLng": ["51.7520", "-1.2577" ]
+  "defaultLatLng_comment": "The default latitude and longitude values for initiatives with no address",
+  "defaultLatLng": ["50.84999", "4.39434" ]
 }
