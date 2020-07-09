@@ -1,19 +1,19 @@
 
-#: ${1?"Usage: $0 NO VERSION ARGUMENT"}
+: ${1?"Usage: $0 NO VERSION ARGUMENT"}
 ver=$1
 if echo "$1" | grep "[0-9]\+\.[0-9]\+\.[0-9]\+"
 then
         echo creating and uploading sea-map with version $1
         sed -i "s/semver:\^[[:digit:]]\+\.[[:digit:]]\+\.[[:digit:]]\+\"/semver:\^$1\"/" package.json
 else
-	echo No Version, Cannot Deploy, supply versio as the first argument in the form of numbers.numbers.numbers e.g 0.1.38
+	echo No Valid Version, Cannot Deploy, supply versio as the first argument in the form of numbers.numbers.numbers e.g 0.1.38
         exit 0
 fi
 
-#rm -r node_modules/
-#npm update
-#npm install
-#npm run build
+rm -r node_modules/
+npm update
+npm install
+npm run build
 
 seaserv="dev-0"
 if [ "$2" == "dev" ]; then
