@@ -17,7 +17,7 @@
   "license": "UNLICENSED",
   "repository": "github:SolidarityEconomyAssociation/ICA-project",
   "dependencies": {
-    "sea-map": "github:SolidarityEconomyAssociation/sea-map#semver:^0.1.38"
+    "sea-map": "github:SolidarityEconomyAssociation/sea-map#semver:^0.1.39"
   },
   "devDependencies": {}
 }
