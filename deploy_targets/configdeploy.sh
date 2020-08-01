@@ -37,5 +37,5 @@ git push
 
 #refresh cache?
 
-# npm run deploy
+npm run deploy
 #npm config set playground:deploy_to dev-0:/var/www/vhosts/playground.solidarityeconomy.coop/www/
