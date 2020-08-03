@@ -135,6 +135,9 @@ define([], function () {
         if (initiative.country) {
             address += (address.length ? "<br/>" : "") + initiative.country;
         }
+        if (initiative.nongeo == 1 || !initiative.lat || !initiative.lng) {
+            address += (address.length ? "<br/>" : "") + "<i>NO LOCATION AVAILABLE</i>";
+        }
         if (address.length) {
             address = '<p class="sea-initiative-address">' + address + "</p>";
         }

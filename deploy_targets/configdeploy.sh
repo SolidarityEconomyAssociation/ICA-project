@@ -33,9 +33,9 @@ echo "${temp::-1}, \"version\":\"${ver}\"}" > build/out/configuration/version.js
 #deploy to git
 git add -u
 git commit -m "bumped version"
-git push
+#git push
 
 #refresh cache?
 
-npm run deploy
+#npm run deploy
 #npm config set playground:deploy_to dev-0:/var/www/vhosts/playground.solidarityeconomy.coop/www/
