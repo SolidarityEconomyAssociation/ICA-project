@@ -1,4 +1,4 @@
-# playground
+# ICA-project map
 
 Test / development project which uses the SEA's `sea-map` NPM module.
 
@@ -41,25 +41,25 @@ be accessible.
 ## Deploying
 
 First, you need to configure the host to deploy to.  Set the
-`playground:deploy_to` config [parameter appropriately like this:
+`ICA-project:deploy_to` config [parameter appropriately like this:
 
-    npm config set playground:deploy_to example.com:/var/www/playground
+    npm config set ICA-project:deploy_to example.com:/var/www/ica-project
 	
 Obviously you should substitute whatever URL makes sense for your
 deployment. Anything `rsync` understands as a destination URL will
 work.  Note, the deployment will not work if you don't do this.
 
 You can also change the default user and group to deploy as from
-`www-data` by setting the config parameters `playground:deploy_user`
-and `playground:deploy_group` in a similar way.
+`www-data` by setting the config parameters `ICA-project:deploy_user`
+and `ICA-project:deploy_group` in a similar way.
 
 If you need to check the current setting, this will show you:
 
-    npm config get playground:deploy_to
+    npm config get ICA-project:deploy_to
 
 Remember to put the right prefix in front of the variable. It should 
 match the project name defined in `package.json`, so in this case is 
-`playground`, but if you're doing this in another project it won't be.
+`ICA-project`, but if you're doing this in another project it won't be.
 
 
 A script for building, deploying and setting versions is available as well. 
