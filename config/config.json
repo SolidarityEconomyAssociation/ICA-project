@@ -1,6 +1,6 @@
 {
   "namedDatasets_comment" : "These names correspond to directories in www/services which contain: default-graph-uri.txt, endpoint.txt, query.rq",
-  "namedDatasets" : ["ICA"],
+  "namedDatasets" : ["ica"],
   "namedDatasetsVerbose" : ["ICA"],
   "filterableFields_comment" : "A list of the fields that can populate the directory",
   "filterableFields" : [{ "field": "country", "label": "Countries" }],
