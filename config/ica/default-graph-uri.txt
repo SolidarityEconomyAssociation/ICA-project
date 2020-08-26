@@ -1,1 +1,1 @@
-https://w3id.solidarityeconomy.coop/ICA/
+https://dev.lod.coop/ica/
