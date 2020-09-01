@@ -1,7 +1,7 @@
 {
   "name": "ica",
   "version": "0.1.0",
-  "description": "the ica initiatives",
+  "description": "SEA mapping project for the ICA",
   "main": "index.js",
   "config": {
     "deploy_to": "",
