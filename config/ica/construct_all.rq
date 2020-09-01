@@ -1,2 +1,2 @@
 # Example from https://www.w3.org/TR/rdf-sparql-query/#accessingRdfGraphs
-CONSTRUCT { ?s ?p ?o } WHERE { GRAPH <https://dev.lod.coop/ica/> { ?s ?p ?o } . }
+CONSTRUCT { ?s ?p ?o } WHERE { GRAPH <https://lod.coop/ica/> { ?s ?p ?o } . }
