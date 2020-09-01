@@ -1,5 +1,5 @@
 {
-  "name": "ica",
+  "name": "ica-project",
   "version": "0.1.0",
   "description": "SEA mapping project for the ICA",
   "main": "index.js",
@@ -15,7 +15,7 @@
   },
   "author": "Solidarity Economy Association",
   "license": "UNLICENSED",
-  "repository": "github:SolidarityEconomyAssociation/ICA-project",
+  "repository": "github:SolidarityEconomyAssociation/ica-project",
   "dependencies": {
     "sea-map": "github:SolidarityEconomyAssociation/sea-map#semver:^0.1.45"
   },
