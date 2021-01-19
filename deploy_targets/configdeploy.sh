@@ -20,22 +20,23 @@ if [ "$2" == "dev" ]; then
         ./deploy_targets/$2
 elif [ "$2" == "prod" ]; then
         ./deploy_targets/$2
-        sea-serv="sea-0"
+        seaserv="prod-0"
 else
         echo No server target can be dev/prod, deploying to dev
         ./deploy_targets/dev
 fi
 
-temp=`cat config/version.json`
-echo "${temp::-1}, \"version\":\"${ver}\"}" > config/version.json
-echo "${temp::-1}, \"version\":\"${ver}\"}" > build/out/configuration/version.json
+#temp=`cat config/version.json`
+#echo "${temp::-1}, \"version\":\"${ver}\"}" > config/version.json
+#echo "${temp::-1}, \"version\":\"${ver}\"}" > build/out/configuration/version.json
 
 #deploy to git
 git add -u
 git commit -m "bumped version"
-git push
+# git push
 
 #refresh cache?
 
 npm run deploy
+./deploy_targets/delete_cache.sh $seaserv
 #npm config set playground:deploy_to dev-0:/var/www/vhosts/playground.solidarityeconomy.coop/www/
