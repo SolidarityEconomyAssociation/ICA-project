@@ -12,9 +12,9 @@ define([], function () {
     };
 
     var getPopup = function (initiative, sse_initiatives) {
-        let orgStructures = sse_initiatives.getOldStyleVerboseValuesForFields()()["Organisational Structure"];
-        let activitiesVerbose = sse_initiatives.getOldStyleVerboseValuesForFields()()["Activities"];
-        let membershipsVerbose = sse_initiatives.getOldStyleVerboseValuesForFields()()["Base Membership Type"]
+        let orgStructures = sse_initiatives.getOldStyleVerboseValuesForFields()["Organisational Structure"];
+        let activitiesVerbose = sse_initiatives.getOldStyleVerboseValuesForFields()["Activities"];
+        let membershipsVerbose = sse_initiatives.getOldStyleVerboseValuesForFields()["Base Membership Type"]
         membershipsVerbose["BMT10"] = "Consumer/User coops"
         membershipsVerbose["BMT20"] = "Producer coops"
         membershipsVerbose["BMT30"] = "Worker coops"
