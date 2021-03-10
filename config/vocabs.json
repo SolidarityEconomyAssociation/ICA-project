@@ -1,15 +1,15 @@
 {
   "prefixes": {
-    "https://w3id.solidarityeconomy.coop/essglobal/V2a/standard/": "essglobal",
-    "https://w3id.solidarityeconomy.coop/essglobal/V2a/standard/organisational-structure/": "os",
-    "https://w3id.solidarityeconomy.coop/essglobal/V2a/standard/qualifier/": "q",
-    "https://w3id.solidarityeconomy.coop/essglobal/V2a/standard/activities/": "ac",
-    "https://w3id.solidarityeconomy.coop/essglobal/V2a/standard/activities-ica/": "aci",
-    "https://w3id.solidarityeconomy.coop/essglobal/V2a/standard/activities-modified/": "acm",
-    "https://w3id.solidarityeconomy.coop/essglobal/V2a/standard/base-membership-type/": "bmt",
-    "https://w3id.solidarityeconomy.coop/essglobal/V2a/standard/countries/": "coun",
-    "https://w3id.solidarityeconomy.coop/essglobal/V2a/standard/regions/": "reg",
-    "https://w3id.solidarityeconomy.coop/essglobal/V2a/standard/super-regions/": "sreg"
+    "https://dev.lod.coop/essglobal/2.1/standard/": "essglobal",
+    "https://dev.lod.coop/essglobal/2.1/standard/organisational-structure/": "os",
+    "https://dev.lod.coop/essglobal/2.1/standard/qualifier/": "q",
+    "https://dev.lod.coop/essglobal/2.1/standard/activities/": "ac",
+    "https://dev.lod.coop/essglobal/2.1/standard/activities-ica/": "aci",
+    "https://dev.lod.coop/essglobal/2.1/standard/activities-modified/": "acm",
+    "https://dev.lod.coop/essglobal/2.1/standard/base-membership-type/": "bmt",
+    "https://dev.lod.coop/essglobal/2.1/standard/countries-iso/": "coun",
+    "https://dev.lod.coop/essglobal/2.1/standard/regions-ica/": "reg",
+    "https://dev.lod.coop/essglobal/2.1/standard/super-regions-ica/": "sreg"
   },
   "vocabs": {
     "essglobal:base-membership-type/": {
@@ -27,7 +27,7 @@
     },
     "essglobal:organisational-structure/": {
       "EN": {
-        "title": "Legal Form Modified",
+        "title": "Organisational Structure",
         "terms": {
           "os:OS115": "Co-operative",
           "os:OS110": "Secondary co-operative",
@@ -57,7 +57,7 @@
         }
       }
     },
-    "essglobal:super-regions/": {
+    "essglobal:super-regions-ica/": {
       "EN": {
         "title": "Super Regions",
         "terms": {
@@ -69,7 +69,7 @@
         }
       }
     },
-    "essglobal:regions/": {
+    "essglobal:regions-ica/": {
       "EN": {
         "title": "Regions",
         "terms": {
@@ -93,7 +93,7 @@
         }
       }
     },
-    "essglobal:countries/": {
+    "essglobal:countries-iso/": {
       "EN": {
         "title": "Countries",
         "terms": {
@@ -351,7 +351,7 @@
     },
     "essglobal:activities-ica/": {
       "EN": {
-        "title": "Activities ICA",
+        "title": "Activities",
         "terms": {
           "aci:ICA140": "Financial Services",
           "aci:ICA10": "Agriculture",
