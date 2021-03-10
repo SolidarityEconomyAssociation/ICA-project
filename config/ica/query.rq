@@ -3,7 +3,7 @@ PREFIX dc: <http://purl.org/dc/terms/>
 PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
 PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX essglobal: <https://w3id.solidarityeconomy.coop/essglobal/V2a/vocab/>
+PREFIX essglobal: <https://dev.lod.coop/essglobal/2.1/vocab/>
 PREFIX gr: <http://purl.org/goodrelations/v1#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX ospostcode: <http://data.ordnancesurvey.co.uk/id/postcodeunit/>
@@ -11,10 +11,13 @@ PREFIX rov: <http://www.w3.org/ns/regorg#>
 PREFIX osspatialrelations: <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/>
 PREFIX : <https://dev.lod.coop/ica>
 
-SELECT ?activity ?name ?uri ?lat ?lng ?street ?locality ?postcode ?country ?within ?regorg ?www ?primaryActivity ?qualifier ?desc ?manLng ?manLat ?baseMembershipType
+SELECT ?activity ?name ?uri ?lat ?lng ?street ?locality ?postcode ?countryId ?regionId ?within ?regorg ?www ?primaryActivity ?qualifier ?desc ?manLng ?manLat ?baseMembershipType
 WHERE {
     ?uri rdf:type essglobal:SSEInitiative .
     ?uri gr:name ?name .
+    OPTIONAL { ?uri essglobal:countryId ?countryId . }
+    OPTIONAL { ?countryId osspatialrelations:within ?regionId . }
+    OPTIONAL { ?regionId osspatialrelations:within ?superRegionId . }
     OPTIONAL { ?uri essglobal:organisationalStructure ?regorg . }
     OPTIONAL { ?uri essglobal:qualifier ?qualifier .}
     OPTIONAL { ?uri dc:description ?desc . }
