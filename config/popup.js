@@ -12,14 +12,15 @@ define([], function () {
     };
 
     var getPopup = function (initiative, sse_initiatives) {
-        let orgStructures = sse_initiatives.getOldStyleVerboseValuesForFields()["Organisational Structure"];
-        let activitiesVerbose = sse_initiatives.getOldStyleVerboseValuesForFields()["Activities"];
-        let membershipsVerbose = sse_initiatives.getOldStyleVerboseValuesForFields()["Base Membership Type"]
-        membershipsVerbose["BMT10"] = "Consumer/User coops"
-        membershipsVerbose["BMT20"] = "Producer coops"
-        membershipsVerbose["BMT30"] = "Worker coops"
-        membershipsVerbose["BMT40"] = "Multi-stakeholder coops"
-        membershipsVerbose["BMT50"] = "Resident coops"
+        const values = sse_initiatives.getVerboseValuesForFields()
+        let orgStructures = values["Structure Type"];
+        let activitiesVerbose = values["Economic Activities"];
+        let membershipsVerbose = values["Typology"];
+        membershipsVerbose["bmt:BMT10"] = "Consumer/User coops"
+        membershipsVerbose["bmt:BMT20"] = "Producer coops"
+        membershipsVerbose["bmt:BMT30"] = "Worker coops"
+        membershipsVerbose["bmt:BMT40"] = "Multi-stakeholder coops"
+        membershipsVerbose["bmt:BMT50"] = "Resident coops"
         let address = "",
             street,
             locality,
