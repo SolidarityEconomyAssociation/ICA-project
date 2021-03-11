@@ -17,21 +17,12 @@
   "namedDatasets" : ["ica"],
   "namedDatasetsVerbose" : ["ICA"],
   "filterableFields" : [
-    {
-      "field": "countryId",
-      "vocabID": "essglobal:countries-iso/",
-      "label": "Countries"
-    },
-    {
-      "field": "regionId",
-      "vocabID": "essglobal:regions-ica/",
-      "label": "Regions"
-    },
-    {
-      "field": "primaryActivity",
-      "vocabID": "essglobal:activities-ica/",
-      "label": "Activities"
-    }
+    "countryId",
+    "superRegionId",
+    "regionId",
+    "baseMembershipType",
+    "regorg",
+    "primaryActivity"
   ],
   "showDatasetsPanel" : true,
   "tileUrl" : "https:/\/tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=3d5b23b8fe9c4a2a94a3df16f02f125a",
