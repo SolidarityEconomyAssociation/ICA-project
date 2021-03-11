@@ -11,7 +11,7 @@ PREFIX rov: <http://www.w3.org/ns/regorg#>
 PREFIX osspatialrelations: <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/>
 PREFIX : <https://dev.lod.coop/ica>
 
-SELECT ?activity ?name ?uri ?lat ?lng ?street ?locality ?postcode ?countryId ?regionId ?within ?regorg ?www ?primaryActivity ?qualifier ?desc ?manLng ?manLat ?baseMembershipType
+SELECT ?activity ?name ?uri ?lat ?lng ?street ?locality ?postcode ?countryId ?regionId ?superRegionId ?within ?regorg ?www ?primaryActivity ?qualifier ?desc ?manLng ?manLat ?baseMembershipType
 WHERE {
     ?uri rdf:type essglobal:SSEInitiative .
     ?uri gr:name ?name .
