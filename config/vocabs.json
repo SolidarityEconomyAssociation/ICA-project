@@ -14,7 +14,7 @@
   "vocabs": {
     "essglobal:base-membership-type/": {
       "EN": {
-        "title": "Base Membership Type",
+        "title": "Typology",
         "terms": {
           "bmt:BMT20": "Producers",
           "bmt:BMT60": "Others",
@@ -27,7 +27,7 @@
     },
     "essglobal:organisational-structure/": {
       "EN": {
-        "title": "Organisational Structure",
+        "title": "Structure Type",
         "terms": {
           "os:OS115": "Co-operative",
           "os:OS110": "Secondary co-operative",
@@ -351,7 +351,7 @@
     },
     "essglobal:activities-ica/": {
       "EN": {
-        "title": "Activities",
+        "title": "Economic Activities",
         "terms": {
           "aci:ICA140": "Financial Services",
           "aci:ICA10": "Agriculture",
