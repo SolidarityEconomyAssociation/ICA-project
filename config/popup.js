@@ -1,5 +1,5 @@
-define([], function () {
-    "use strict";
+define(["model/sse_initiative"], function (sse_initiatives) {
+  "use strict";
 
     var getLatLng = function (initiative) {
         return [initiative.lat, initiative.lng];
@@ -153,8 +153,10 @@ define([], function () {
         if (initiative.postcode) {
             address += (address.length ? "<br/>" : "") + initiative.postcode;
         }
-        if (initiative.country) {
-            address += (address.length ? "<br/>" : "") + initiative.country;
+        if (initiative.countryId) {
+            const vocabUri = sse_initiatives.getVocabUriForProperty('countryId');
+            const countryName = sse_initiatives.getVocabTerm(vocabUri, initiative.countryId);
+            address += (address.length ? "<br/>" : "") + (countryName || initiative.countryId);
         }
         if (initiative.nongeo == 1 || !initiative.lat || !initiative.lng) {
             address += (address.length ? "<br/>" : "") + "<i>NO LOCATION AVAILABLE</i>";
