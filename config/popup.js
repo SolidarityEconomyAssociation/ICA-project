@@ -30,6 +30,7 @@ define([], function () {
             popupHTML =
                 '<div class="sea-initiative-details">' +
                 '<h2 class="sea-initiative-name">{initiative.name}</h2>' +
+                "{dotcoop.domains}" +
                 '<h4 class="sea-initiative-org-structure">Structure Type: {initiative.org-structure}</h4>' +
                 '<h4 class="sea-initiative-org-typology">Typology: {initiative.org-baseMembershipType}</h4>' +
                 '<h4 class="sea-initiative-economic-activity">Economic Activity: {initiative.economic-activity}</h4>' +
@@ -39,7 +40,6 @@ define([], function () {
                 '<div class="sea-initiative-contact">' +
                 "<h3>Contact</h3>" +
                 "{initiative.address}" +
-                "{dotcoop.domains}" +
                 "{initiative.tel}" +
                 '<div class="sea-initiative-links">' +
                 "{initiative.email}" +
