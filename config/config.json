@@ -1,5 +1,6 @@
 {
-  "languages": ["EN"],
+  "languages": ["EN","FR","ES"],
+  "language": "EN",
 
   "vocabularies": [
     { "endpoint": "http:\/\/dev.data.solidarityeconomy.coop:8890/sparql",
