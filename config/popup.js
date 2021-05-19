@@ -11,16 +11,12 @@ define(["model/sse_initiative"], function (sse_initiatives) {
         return tel.replace(/^(\d)(\d{4})\s*(\d{6})/, "$1$2 $3");
     };
 
-    var getPopup = function (initiative, sse_initiatives, labels) {
-        const values = sse_initiatives.getVerboseValuesForFields()
-        let orgStructures = values["Structure Type"];
-        let activitiesVerbose = values["Economic Activities"];
-        let membershipsVerbose = values["Typology"];
-        membershipsVerbose["bmt:BMT10"] = "Consumer/User coops"
-        membershipsVerbose["bmt:BMT20"] = "Producer coops"
-        membershipsVerbose["bmt:BMT30"] = "Worker coops"
-        membershipsVerbose["bmt:BMT40"] = "Multi-stakeholder coops"
-        membershipsVerbose["bmt:BMT50"] = "Resident coops"
+    var getPopup = function (initiative, sse_initiatives) {
+        const values = sse_initiatives.getLocalisedVocabs();
+        const labels = sse_initiatives.getFunctionalLabels();
+        let orgStructures = values["os:"].terms;
+        let activitiesVerbose = values["aci:"].terms;
+        let membershipsVerbose = values["bmt:"].terms;
         let address = "",
             street,
             locality,
@@ -31,9 +27,9 @@ define(["model/sse_initiative"], function (sse_initiatives) {
                 '<div class="sea-initiative-details">' +
                 '<h2 class="sea-initiative-name">{initiative.name}</h2>' +
                 "{dotcoop.domains}" +
-                '<h4 class="sea-initiative-org-structure">Structure Type: {initiative.org-structure}</h4>' +
-                '<h4 class="sea-initiative-org-typology">Typology: {initiative.org-baseMembershipType}</h4>' +
-                '<h4 class="sea-initiative-economic-activity">Economic Activity: {initiative.economic-activity}</h4>' +
+                `<h4 class="sea-initiative-org-structure">${values["os:"].title}: ${orgStructures[initiative.regorg]}</h4>` +
+                `<h4 class="sea-initiative-org-typology">${values["bmt:"].title}: ${membershipsVerbose[initiative.baseMembershipType]}</h4>` +
+                `<h4 class="sea-initiative-economic-activity">${values["aci:"].title}: ${activitiesVerbose[initiative.primaryActivity]}</h4>` +
                 '<h5 class="sea-initiative-secondary-activity">Secondary Activities: {initiative.secondary-activity}</h5>' +
                 "<p>{initiative.desc}</p>" +
                 "</div>" +
