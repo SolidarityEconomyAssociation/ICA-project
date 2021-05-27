@@ -30,5 +30,11 @@
   "mapAttribution" :  "Maps &copy; <a href='http:/\/www.thunderforest.com'>Thunderforest</a> & &copy; <a href='http:/\/www.openstreetmap.org/copyright'>OpenStreetMap contributors</a> | Other data <a href='http:/\/creativecommons.org/licenses/by-sa/2.0/'>CC-BY-SA</a> | Powered by <a href='https:/\/www.geoapify.com/'>Geoapify</a>",
   "htmlTitle" : "ICA Map",
   "logo": "configuration/logo.png",
-  "defaultLatLng": ["50.84999", "4.39434" ]
+  "defaultLatLng": ["50.84999", "4.39434" ],
+
+  "dialogueSize": {
+    "width": "50vw!important",
+    "height": "300px",
+    "descriptionRatio": "2"
+  }
 }
