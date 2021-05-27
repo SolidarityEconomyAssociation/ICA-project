@@ -33,7 +33,7 @@
   "defaultLatLng": ["50.84999", "4.39434" ],
 
   "dialogueSize": {
-    "width": "50vw!important",
+    "width": "50vw",
     "height": "300px",
     "descriptionRatio": "2"
   }
