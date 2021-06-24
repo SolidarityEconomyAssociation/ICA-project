@@ -40,6 +40,7 @@
     "height": "300px",
     "descriptionRatio": "2"
   },
-  "defaultOpenSidebar": true
+  "defaultOpenSidebar": true,
+  "sidebarButtonColour": "#8E0B56"
 
 }
